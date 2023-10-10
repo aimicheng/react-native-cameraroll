@@ -460,6 +460,7 @@ RCT_EXPORT_METHOD(getPhotos:(NSDictionary *)params
           },
           @"timestamp": @(asset.creationDate.timeIntervalSince1970),
           @"modificationTimestamp": @(asset.modificationDate.timeIntervalSince1970),
+          @"is_favorite": @[asset.isFavorite],
           @"location": (includeLocation && loc ? @{
               @"latitude": @(loc.coordinate.latitude),
               @"longitude": @(loc.coordinate.longitude),

@@ -48,6 +48,7 @@ type PhotoIdentifier = {
     };
     timestamp: number;
     modificationTimestamp: number;
+    is_favorite: boolean;
     location: {
       latitude?: number;
       longitude?: number;
