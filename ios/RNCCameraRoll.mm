@@ -460,7 +460,7 @@ RCT_EXPORT_METHOD(getPhotos:(NSDictionary *)params
           },
           @"timestamp": @(asset.creationDate.timeIntervalSince1970),
           @"modificationTimestamp": @(asset.modificationDate.timeIntervalSince1970),
-          @"is_favorite": @[asset.isFavorite],
+          @"is_favorite": @(asset.isFavorite),
           @"location": (includeLocation && loc ? @{
               @"latitude": @(loc.coordinate.latitude),
               @"longitude": @(loc.coordinate.longitude),
@@ -617,6 +617,7 @@ RCT_EXPORT_METHOD(getPhotoByInternalID:(NSString *)internalId
                               },
                           @"timestamp": @(asset.creationDate.timeIntervalSince1970),
                           @"modificationTimestamp": @(asset.modificationDate.timeIntervalSince1970),
+                          @"is_favorite": @(asset.isFavorite),
                           @"location": (loc ? @{
                                                 @"latitude": @(loc.coordinate.latitude),
                                                 @"longitude": @(loc.coordinate.longitude),
@@ -666,6 +667,7 @@ RCT_EXPORT_METHOD(getPhotoByInternalID:(NSString *)internalId
                               },
                           @"timestamp": @(asset.creationDate.timeIntervalSince1970),
                           @"modificationTimestamp": @(asset.modificationDate.timeIntervalSince1970),
+                          @"is_favorite": @(asset.isFavorite),
                           @"location": (loc ? @{
                                                 @"latitude": @(loc.coordinate.latitude),
                                                 @"longitude": @(loc.coordinate.longitude),
